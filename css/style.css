@@ -1,0 +1,161 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+*,*::before,*::after{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input,button,textarea{font-family: inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1, h2, h3, h4, h5, h6{font-size: inherit;font-weight: 400;}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    background-color: rgb(250, 247, 203);
+}
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.grid-numbers {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(1, 150px);
+    grid-gap: 10px;
+    margin-bottom: 30px;
+}
+.numer {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    color: white;
+    background-color: rgb(44, 41, 73);
+    border-radius: 10px;
+    transition: 0.2s;
+    padding: 20px;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.numer:hover{
+    background-color: rgb(75, 70, 113);
+}
+
+.numer:active{
+    transform: scale(0.9);
+}
+
+.numer:disabled{
+    background-color: gray;
+    transform: scale(1);
+}
+
+.output-numer {
+    width: 470px;
+    height: 150px;
+    background-color: rgb(44, 41, 73);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+@media (max-width: 500px){
+    .grid-numbers{
+        grid-template-columns: repeat(3, 80px);
+        grid-template-rows: repeat(1, 80px);
+    }
+    .output-numer{
+        width: 260px;
+        height: 80px;
+        font-size: 18px;
+    }
+}
+/* ----------Ставка и баланс------------ */
+.balance{
+    display: flex;
+    margin-bottom: 50px;
+    align-items: center;
+}
+
+.balance-string {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-right: 10px;
+}
+.balance-size {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    background-color: rgb(62, 62, 145);
+    padding: 10px;
+    border-radius: 5px;
+    color: azure;
+}
+
+.bet-container {
+    display: flex;
+    margin-bottom: 50px;
+    align-items: center;
+}
+.bet-size {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-right: 10px;
+}
+.bet {
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.bet:focus{
+    border: 2px solid blue;
+}
